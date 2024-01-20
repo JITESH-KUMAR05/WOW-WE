@@ -9,17 +9,13 @@ function Contact(){
               <div className="w-[40%] h-full relative">
                 <div className="w-full min-h-[15%] relative flex">
                   <h1 className={`text-[26px] letter w-full flex items-start font-cursive   absolute left-0  h-full`}>
-                    <span className={` flex-center bg-[#f5f5f5ed] text-[#050505] rounded-full h-[40px] w-[40px] mr-1`}>
-                      R
-                    </span>
-                    <span className='pt-1 h-10 textColor'>
-                      ahul
-                    </span>
+                    
+                    
                   </h1>
                 </div>
                 <div className={`relative w-full h-[60%] leading-10 text-lg `} >
                   <p className="mt-5">
-                    I am a senior frontend developer and full stack developer n development.
+                    We are trying to make the world a better place 
                   </p>
                 </div>
               </div>
@@ -42,15 +38,7 @@ function Contact(){
                 </div>
               </div>
             </div>
-            <div className="w-full h-[20%] flex-center relative">
-                   <div className="w-full h-full  border-t border-[#64dcdd]">
-                    <div className="h-[50%] w-full flex-bet " >
-                       <div className="">
-                        <p className={` mt-8`}>Website Designed By Rahul</p>
-                       </div>
-                    </div>
-                   </div>
-            </div>
+            
           </div>
         </div>
       </section>

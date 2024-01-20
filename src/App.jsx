@@ -26,9 +26,11 @@ const [shouldHide, setShouldHide] = useState(false);
 const navigate = useNavigate();
 
   const refreshHandler = () => {
-    setShouldHide(false);
+    
     window.location.reload();
+    setShouldHide(false);
     navigator.navigate("/");
+    
   };
   const displayHandler = () => {
     setShouldHide(true);
@@ -38,48 +40,7 @@ const navigate = useNavigate();
   return (
     <>
       <div className={shouldHide ? " " : "d-none"}>
-        <div className="absolute top-0 w-full ">
-          <nav className="flex justify-center hover:text-green-300  p-3 w-full   text-center text-lg text-[#000000]  absolute z-10  gap-2 font-bold ">
-            <Link
-              to="/"
-              // onClick={refreshHandler}
-              className=" hover:text-green-600 hover:underline hover:scale-110 hover:shadow-lg rounded-full p-2 "
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className=" hover:text-green-600 hover:underline hover:scale-110 hover:shadow-lg rounded-full p-2 "
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className=" hover:text-green-600 hover:underline hover:scale-110 hover:shadow-lg rounded-full p-2 "
-            >
-              Contact
-            </Link>
-            <Link
-              to="/join"
-              className=" hover:text-green-600 hover:underline hover:scale-110 hover:shadow-lg rounded-full p-2 "
-            >
-              Join Now
-            </Link>
-          </nav>
-        </div>
-      </div>
-
-
-      {/*  */}
-
-
-      <div className={shouldHide ? "d-none" : ""}>
-        <img
-          className="w-full h-screen object-cover scale-x-[-1] z-0 relative "
-          src="https://arbordayblog.org/wp-content/uploads/2022/04/TFT-ElectricPeach_Nicaragua_planting-1080x608.jpg"
-          alt="loading"
-        />
-        <div className="absolute w-full  top-0 ">
+      <div className="absolute w-full  top-0 ">
           <nav  className="  flex justify-between transition duration-300 ease-in-out text-center items-center hover:bg-[#FDE579]  p-3 w-full text-lg absolute z-10  gap-2 font-bold ">
             <div className="w-[10rem] h-[5rem]">
               <img className="object-cover w-full h-full cursor-pointer bg-transparent scale-[0.8] hover:shadow-lg" 
@@ -102,11 +63,77 @@ const navigate = useNavigate();
                 About
               </Link>
               <Link
-                to="/contact"
+                to="/contribute"
                 onClick={displayHandler}
                 className="p-2 rounded-full hover:text-green-800 hover:scale-110 hover:shadow-lg"
               >
-                Contact
+                Contribute
+              </Link>
+              <Link
+                to="/join"
+                onClick={displayHandler}
+                className="p-2 rounded-full hover:text-green-800 hover:scale-110 hover:shadow-lg"
+              >
+                Join Now
+              </Link>
+            </div>
+
+            <div className="flex justify-center gap-4">
+              <button className="p-2 rounded-full hover:text-green-800 hover:underline hover:scale-110 hover:shadow-lg ">
+                Host event
+              </button><button className="p-2 rounded-full hover:text-green-800 hover:underline hover:scale-110 hover:shadow-lg ">
+                Join a Event
+              </button>
+              <Link
+                to="/join"
+                onClick={displayHandler}
+                className="p-2 rounded-full hover:text-green-800 hover:underline hover:scale-110 hover:shadow-lg"
+              >
+                Join Us
+              </Link>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+
+      {/*  */}
+
+
+      <div className={shouldHide ? "d-none" : ""}>
+        <img
+          className="w-full h-screen object-cover scale-x-[-1] z-0 relative "
+          src="https://arbordayblog.org/wp-content/uploads/2022/04/TFT-ElectricPeach_Nicaragua_planting-1080x608.jpg"
+          alt="loading"
+        />
+        <div className="absolute w-full  top-0 ">
+          <nav  className="  flex justify-between transition duration-300 ease-in-out text-center items-center hover:bg-[#FDE579]  p-3 w-full text-lg absolute z-10  gap-2 font-bold ">
+            <div className="w-[10rem] h-[5rem]">
+              <img className="object-cover cursor-pointer bg-transparent scale-[1] w-[8rem] h-[6rem] rounded-[50%] p-2  hover:shadow-lg" 
+              src={logo} alt="" />
+            </div>
+            <div className="p-2">
+              <Link
+                to="/"
+                onClick={refreshHandler}
+                className="p-2 rounded-full hover:text-green-800 hover:scale-110 hover:shadow-lg"
+              >
+                Home
+              </Link>
+              
+              <Link
+                to="/about"
+                onClick={displayHandler}
+                className="p-2 rounded-full hover:text-green-800 hover:scale-110 hover:shadow-lg"
+              >
+                About
+              </Link>
+              <Link
+                to="/contribute"
+                onClick={displayHandler}
+                className="p-2 rounded-full hover:text-green-800 hover:scale-110 hover:shadow-lg"
+              >
+                Contribute
               </Link>
               <Link
                 to="/join"
@@ -182,7 +209,7 @@ const navigate = useNavigate();
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contribute" element={<Contact />} />
         <Route path="/join" element={<JoinNow />} />
         <Route path="/host" element={<Host />} />
         <Route path="/joinEvent" element={<JoinEvent />} />
