@@ -276,33 +276,10 @@ const navigate = useNavigate();
           {/*  */}
 
           <div className=" ">
-            <div className="">
-              <a href=" ">
-                <img
-                  decoding="async"
-                  className="img-fluid"
-                  width={160}
-                  src=''
-                  alt="Wallet"
-                />
-              </a>
-            </div>
-            <div className="">
-              <ul className="">
-                <li className="">
-                  <a className="" href="">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li className="">
-                  <a className="" href="terms&conditions">
-                    Terms &amp; Conditions
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="">
-              <ul className="">
+            
+            
+            <div className=" flex w-full  justify-center p-5 ">
+              <ul className=" flex justify-center items-center gap-2">
                 <li className="">
                   <a
                     title="Join Whatsapp community"
@@ -313,8 +290,9 @@ const navigate = useNavigate();
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      height={16}
-                      width={14}
+                      className="hover:text-green-800"
+                      height={40}
+                      width={40}
                       viewBox="0 0 448 512"
                     >
                       {/*!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.*/}
@@ -345,8 +323,8 @@ const navigate = useNavigate();
                      */}
                      <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      height={16}
-                      width={14}
+                      height={40}
+                      width={40}
                       viewBox="0 0 448 512"
                     >
                       {/*!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.*/}
