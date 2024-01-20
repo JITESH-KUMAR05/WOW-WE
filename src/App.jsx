@@ -13,6 +13,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import JoinNow from "./components/Join";
+import logo from "./images/logo.png";
 
 // import './images'
 
@@ -79,9 +80,10 @@ const navigate = useNavigate();
           alt="loading"
         />
         <div className="absolute w-full  top-0 ">
-          <nav  className="  flex justify-between transition duration-300 ease-in-out text-center items-center hover:bg-slate-300  p-3 w-full text-lg absolute z-10  gap-2 font-bold ">
+          <nav  className="  flex justify-between transition duration-300 ease-in-out text-center items-center hover:bg-[#FDE579]  p-3 w-full text-lg absolute z-10  gap-2 font-bold ">
             <div className="w-[10rem] h-[5rem]">
-              <img className="object-cover w-full h-full cursor-pointer" src="https://s3sdghub.s3.eu-west-1.amazonaws.com/core-cms/public/styles/media_image_large/public/images/projects/Screenshot_20200928-134945.jpg?itok=9ZrDhbws" alt="" />
+              <img className="object-cover w-full h-full cursor-pointer bg-transparent scale-[0.8] hover:shadow-lg" 
+              src={logo} alt="" />
             </div>
             <div className="p-2">
               <Link
@@ -283,7 +285,7 @@ const navigate = useNavigate();
                 <li className="">
                   <a
                     title="Join Whatsapp community"
-                    className="text-black"
+                    className="text-black hover:text-green-800"
                     href="https://chat.whatsapp.com/CFMPnYKORMMBNaRYm3042w"
                   >
                     {/* <i className="fab fa-whatsapp" /> */}
