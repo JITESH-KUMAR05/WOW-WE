@@ -57,7 +57,7 @@ const JoinNow = () => {
           <div>
             <img
               className="w-[100%]  rounded-xl shadow-lg shadow-gray-400 "
-              src={img2}
+              src='https://images.livemint.com/rf/Image-621x414/LiveMint/Period1/2014/10/03/Photos/modicleanroad--621x414.jpg'
               alt="Plant a tree on your birthday"
             />
           </div>
@@ -152,7 +152,7 @@ const JoinNow = () => {
             <div>
               <img
                 className="w-[100%] mt-[0rem] rounded-xl shadow-lg shadow-gray-400 "
-                src={img3}
+                src='https://w.ndtvimg.com/sites/3/2018/07/17231332/shubhra-hyderabad-movement-cleanup-activity.jpg'
                 alt="Plant a tree on your birthday"
               />
             </div>
