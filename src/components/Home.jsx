@@ -5,11 +5,11 @@ import About from "./About";
 function Home() {
   return (
     <div id="Home">
-      <div className="pt-12 px-60">
+      <div className="pt-12 px-60 bg-[#c8dbcf] py-5">
         <h3 className={`text-[#000000e8] font-bold text-center pb-8 text-3xl`}>
           Our Mission
         </h3>
-        <p className="text-center">
+        <p className="text-center ">
           Connecting Communities, Nurturing Nature At TechVedas, our mission is
           to foster a deep connection between communities and the natural world.
           We believe in the transformative power of nature and aim to create

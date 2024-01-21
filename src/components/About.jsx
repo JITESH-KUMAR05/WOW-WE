@@ -22,10 +22,7 @@ function About() {
 
 
                
-         <h1 class=" mt-0 text-4xl font-bold text-center m-0 p-0"> Our Previous Events</h1>
-
-
-
+         <h1 class=" mt-5 text-4xl font-bold text-center m-0 p-0"> Our Previous Events</h1>
 
 
          <br />
