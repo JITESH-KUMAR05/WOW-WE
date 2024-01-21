@@ -14,12 +14,15 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import JoinNow from "./components/Join";
 import logo from "./images/logo.png";
+import bg from "./images/img1.jpg";
 
 // import './images'
 
 
 import Host from "./components/Host";
 import JoinEvent from "./components/JoinEvent";
+
+
 
 function App() {
 const [shouldHide, setShouldHide] = useState(false);
@@ -103,7 +106,7 @@ const navigate = useNavigate();
       <div className={shouldHide ? "d-none" : ""}>
         <img
           className="w-full h-screen object-cover scale-x-[-1] z-0 relative "
-          src="https://arbordayblog.org/wp-content/uploads/2022/04/TFT-ElectricPeach_Nicaragua_planting-1080x608.jpg"
+          src={bg}
           alt="loading"
         />
         <div className="absolute w-full  top-0 ">

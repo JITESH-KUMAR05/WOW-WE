@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Join.css";
+import img1 from "../images/img1.jpg";
+import img2 from "../images/img2.png";
+import img3 from "../images/img3.png";
 
 const JoinNow = () => {
   const [fullName, setFullName] = useState("");
@@ -8,32 +11,59 @@ const JoinNow = () => {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
 
-  const handleSignUp = () => {
-    // Perform sign-up logic here
-    console.log("Full Name:", fullName);
-    console.log("Email:", email);
-    console.log("Phone Number:", phoneNumber);
-    console.log("City:", city);
-    console.log("Country:", country);
+  const handleSignUp = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/api/join", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          phoneNumber,
+          city,
+          country,
+        }),
+      });
+
+      if (response.ok) {
+        console.log("User created successfully");
+        // You can add further logic here, such as redirecting the user or showing a success message.
+      } else {
+        console.error("Failed to create user");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <div className=" w-full  items-center flex flex-col  h-screen pt-20">
-      <div className=" w-full flex justify-center">
-        <h2 className="font-bold text-[001b5e] text-[2rem] bg-green-600 w-[30%] p-1 flex mt-0 mb-0  justify-center rounded-xl">
+    <div className=" w-full  items-center flex flex-col mt-20  h-screen pt-20">
+      <div className=" w-full flex justify-center items-center mr-11">
+        <h2 className="font-bold text-[001b5e] text-[2rem] bg-green-600 w-[30%] p-1 flex mt-0 mb-0  justify-center items-center rounded-xl">
           Join Now
         </h2>
       </div>
+
       <div className="w-full h-screen flex gap-4">
-        <div className="flex flex-col w-[32%]">
+        <div className="flex flex-col w-[32%] gap-1">
           <div>
             <img
-              className="w-[100%] mt-[10rem] rounded-xl shadow-lg shadow-gray-400 "
-              src="https://as1.ftcdn.net/v2/jpg/03/17/77/56/1000_F_317775600_JKciDI05JhXozAALhu87VYuQ12rml6ru.jpg"
+              className="w-[100%] object-fill mt-[0rem] rounded-xl shadow-lg shadow-gray-400 "
+              src={img1}
+              alt="Plant a tree on your birthday"
+            />
+          </div>
+          <div>
+            <img
+              className="w-[100%]  rounded-xl shadow-lg shadow-gray-400 "
+              src={img2}
               alt="Plant a tree on your birthday"
             />
           </div>
         </div>
+
         <div className="w-[30%]  ">
           <form className=" w-[100%]  items-center flex flex-col justify-center ">
             <label className="yes w-full ">
@@ -48,7 +78,9 @@ const JoinNow = () => {
                 onChange={(e) => setFullName(e.target.value)}
               />
             </label>
+
             <br />
+
             <label className=" w-full mt-0">
               <p className="label-heading label-heading font-bold text-[1.5rem] mb-0 mt-0 ml-3">
                 Email
@@ -61,7 +93,9 @@ const JoinNow = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </label>
+
             <br />
+
             <label className=" w-full">
               <p className="label-heading label-heading font-bold text-[1.5rem] ml-3">
                 Phone Number
@@ -74,7 +108,9 @@ const JoinNow = () => {
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </label>
+
             <br />
+
             <label className=" w-full">
               <p className="label-heading label-heading font-bold text-[1.5rem] ml-3">
                 City
@@ -87,7 +123,9 @@ const JoinNow = () => {
                 onChange={(e) => setCity(e.target.value)}
               />
             </label>
+
             <br />
+
             <label className=" w-full m-0">
               <p className="label-heading label-heading font-bold text-[1.5rem]  mb-0 mt-0 ml-3">
                 Country
@@ -111,12 +149,21 @@ const JoinNow = () => {
           </form>
         </div>
         <div className="flex flex-col w-[32%]">
-          <div>
-            <img
-              className="w-[100%] mt-[10rem] rounded-xl shadow-lg shadow-gray-400 "
-              src="https://as1.ftcdn.net/v2/jpg/03/17/77/56/1000_F_317775600_JKciDI05JhXozAALhu87VYuQ12rml6ru.jpg"
-              alt="Plant a tree on your birthday"
-            />
+          <div className="flex flex-col w-[100%] gap-1">
+            <div>
+              <img
+                className="w-[100%] mt-[0rem] rounded-xl shadow-lg shadow-gray-400 "
+                src={img3}
+                alt="Plant a tree on your birthday"
+              />
+            </div>
+            <div>
+              <img
+                className="w-[100%]  rounded-xl shadow-lg shadow-gray-400 "
+                src="https://as1.ftcdn.net/v2/jpg/03/17/77/56/1000_F_317775600_JKciDI05JhXozAALhu87VYuQ12rml6ru.jpg"
+                alt="Plant a tree on your birthday"
+              />
+            </div>
           </div>
         </div>
       </div>
