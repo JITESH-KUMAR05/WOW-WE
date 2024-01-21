@@ -14,7 +14,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import JoinNow from "./components/Join";
 import logo from "./images/logo.png";
-import bg from "./images/img1.jpg";
+import bg from "./images/bg.png";
+
 
 // import './images'
 
@@ -105,11 +106,11 @@ const navigate = useNavigate();
 
       <div className={shouldHide ? "d-none" : ""}>
         <img
-          className="w-full h-screen object-cover scale-x-[-1] z-0 relative "
+          className="w-full h-screen object-cover scale-x-[1] z-0 relative "
           src={bg}
           alt="loading"
         />
-        <div className="absolute w-full  top-0 ">
+        <div className="absolute w-full  top-0 text-white hover:text-black ">
           <nav  className="  flex justify-between transition duration-300 ease-in-out text-center items-center hover:bg-[#FDE579]  p-3 w-full text-lg absolute z-10  gap-2 font-bold ">
             <div className="w-[10rem] h-[5rem]">
               <img className="object-cover cursor-pointer bg-transparent scale-[1] w-[8rem] h-[6rem] rounded-[50%] p-2  hover:shadow-lg" 
@@ -166,19 +167,18 @@ const navigate = useNavigate();
 
         <div className="absolute text-white items-center top-0 left-0  h-screen w-full">
           <div className="  w-full h-screen flex flex-col justify-center items-center">
-            <h1 className="text-lg font-bold">home page content</h1>
+            
             <TypeAnimation
-              className="text-white font-bold text-lg"
+              className="text-[#efe7dd] font-bold text-[5rem] mt-10"
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "we are here to make a change",
+                "MAKE A BETTER FUTURE",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "lets make a change",
+                "HELP FOR GREATER GOOD",
                 1000,
-                "every tree counts",
+                "CALL FOR YOU",
                 1000,
-                "cleanliness is next to godliness",
-                1000,
+                
               ]}
               wrapper="span"
               speed={50}
